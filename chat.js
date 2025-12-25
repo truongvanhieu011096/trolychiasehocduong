@@ -3,7 +3,7 @@ const input = document.getElementById("userInput");
 const popup = document.getElementById("popup");
 
 let mood = "";
-let responseCount = 0; // đếm số câu bot đã trả lời
+let responseCount = 0;
 
 input.addEventListener("keydown", e => {
     if (e.key === "Enter") send();
@@ -34,30 +34,41 @@ function send() {
 }
 
 function r(arr){
-    if(!arr||arr.length===0) return "";
     return arr[Math.floor(Math.random()*arr.length)];
 }
 
-function needForm(msg){
-    if(!msg) return false;
-    const sensitive = ["rất sợ","bị đánh","không dám nói","đe dọa","kéo dài"];
-    return sensitive.some(k=>msg.includes(k));
-}
-
-// Câu chia sẻ chuyên gia (ví dụ, có thể mở rộng thêm)
 const topics = {
-    "bắt nạt":["Thầy cô hiểu cảm giác của em. Việc nói ra là bước đầu tiên.","Ghi lại sự việc và chia sẻ với người lớn tin cậy.","Nếu việc này kéo dài, hãy liên hệ thầy cô hoặc biểu mẫu kín."],
-    "buồn":["Cảm giác buồn là bình thường. Hãy chia sẻ với người tin cậy.","Thử viết ra cảm xúc để nhìn nhận chúng.","Nếu buồn lâu, thầy cô luôn sẵn sàng giúp em."],
-    "lo lắng":["Lo lắng là tự nhiên. Hãy thử hít thở sâu và xác định điều có thể kiểm soát.","Chia sẻ với thầy cô giúp em bớt căng thẳng."],
-    "stress":["Stress xảy ra nhiều học sinh. Nghỉ giải lao và làm việc từng bước giúp giảm stress.","Thầy cô có thể hướng dẫn kỹ thuật thư giãn."],
-    "trầm cảm":["Cảm giác mất hứng thú, buồn lâu là cần chú ý.","Đừng chịu một mình, hãy chia sẻ với người tin cậy.","Nếu nặng, điền form hoặc gọi thầy cô."]
+    "bị đánh": [
+        "Em đã rất dũng cảm khi chia sẻ.",
+        "Báo ngay với bố mẹ để được hỗ trợ.",
+        "Đi kiểm tra sức khỏe nếu cần.",
+        "Thông báo thầy cô chủ nhiệm để nhận sự giúp đỡ.",
+        "Ghi lại chi tiết sự việc, ngày giờ, chứng cứ.",
+        "Nếu lặp lại → liên hệ ban giám hiệu.",
+        "Học kỹ năng tự bảo vệ, tránh nguy hiểm.",
+        "Đừng giữ cảm xúc một mình, chia sẻ giúp em bớt căng thẳng.",
+        "Điền biểu mẫu kín hoặc gọi trực tiếp thầy cô nếu cần."
+    ],
+    "bắt nạt": [
+        "Thầy cô hiểu cảm giác này. Hãy kể chi tiết để được hướng dẫn.",
+        "Ghi lại sự việc, báo người lớn tin cậy.",
+        "Nếu trên mạng, chụp màn hình và báo thầy cô hoặc bố mẹ.",
+        "Đừng giữ cảm xúc một mình, chia sẻ giúp em giảm căng thẳng.",
+        "Nhớ rằng em xứng đáng được tôn trọng và an toàn."
+    ],
+    "buồn":["Cảm giác buồn là bình thường. Chia sẻ với người tin cậy.","Viết nhật ký giúp nhận diện cảm xúc.","Đi dạo, nghe nhạc giúp cải thiện tâm trạng.","Nếu buồn lâu, chia sẻ với thầy cô."],
+    "lo lắng":["Hít thở sâu, phân tích điều có thể kiểm soát.","Chia sẻ với thầy cô hoặc bố mẹ.","Viết ra điều lo để tìm cách giải quyết.","Nếu kéo dài → điền form hoặc gọi thầy cô."],
+    "stress":["Nghỉ giải lao, tập thể dục, nghe nhạc thư giãn.","Sắp xếp công việc, học tập theo từng bước.","Chia sẻ với thầy cô hoặc người tin cậy.","Nếu kéo dài → điền form hoặc gọi thầy cô."],
+    "sức khỏe":["Chia sẻ với bố mẹ hoặc thầy cô.","Đến bác sĩ khi có dấu hiệu bất thường.","Thầy cô hướng dẫn cách chăm sóc sức khỏe.","Nếu cần → điền form hoặc gọi trực tiếp."],
+    "mạng":["Không trả lời xúc phạm, chặn người gây hại.","Lưu lại bằng chứng, báo thầy cô hoặc bố mẹ.","Chia sẻ cảm xúc giúp bớt căng thẳng.","Luôn nhớ em xứng đáng được tôn trọng."],
+    "ATGT":["Tuân thủ luật giao thông.","Đi cùng bạn hoặc người lớn khi đường vắng.","Chú ý biển báo, tín hiệu.","Báo người lớn nếu gặp tình huống nguy hiểm."]
 };
 
 function getResponse(msg){
     let reply="";
 
     for(let topic in topics){
-        if(Object.hasOwn(topics,topic) && msg.includes(topic)){
+        if(msg.includes(topic)){
             reply = r(topics[topic]);
             break;
         }
@@ -73,9 +84,8 @@ function getResponse(msg){
         ]);
     }
 
-    // Gợi ý form/gọi sau mỗi 10 câu
     if(responseCount>=10 && responseCount%10===0){
-        reply += "<br><br>💡 Nếu em vẫn còn lo lắng, em có thể điền biểu mẫu kín hoặc gọi trực tiếp cho thầy cô:";
+        reply += "<br><br>💡 Nếu em vẫn còn lo lắng, em có thể điền biểu mẫu kín hoặc gọi trực tiếp thầy cô:";
         reply += `<br><a href="https://forms.gle/PWc5rKJEGZw564zD8" target="_blank">📝 Biểu mẫu hỗ trợ kín đáo</a>`;
         reply += `<br>📞 Gọi trực tiếp: 0909123456`;
     }
