@@ -44,57 +44,41 @@ function r(arr){
 // Các chủ đề và câu trả lời dài, nhẹ nhàng, hướng dẫn vượt qua
 const topics = {
     "bị đánh": [
-        "Em đã rất dũng cảm khi chia sẻ điều này. Điều đầu tiên, hãy báo ngay với bố mẹ để nhận sự hỗ trợ và bảo vệ an toàn.",
-        "Đi kiểm tra sức khỏe, ghi lại bằng chứng nếu có, và thông báo thầy cô chủ nhiệm để họ cùng em xử lý.",
-        "Ghi lại chi tiết: ngày, giờ, nơi xảy ra, và người liên quan. Điều này sẽ giúp thầy cô và bố mẹ có thông tin đầy đủ.",
-        "Nếu sự việc lặp lại, liên hệ ban giám hiệu. Đừng giữ cảm xúc một mình, chia sẻ giúp em bớt căng thẳng.",
-        "Học kỹ năng tự bảo vệ, tránh nơi nguy hiểm. Thầy cô luôn sẵn sàng đồng hành cùng em."
+        "Em đã rất dũng cảm khi chia sẻ 💙. Báo bố mẹ để nhận sự hỗ trợ và bảo vệ bản thân.",
+        "Ghi lại chi tiết sự việc, thông báo thầy cô chủ nhiệm để họ đồng hành cùng em.",
+        "Đi kiểm tra sức khỏe nếu bị thương và giữ hồ sơ y tế.",
+        "Học kỹ năng tự bảo vệ, tránh nơi nguy hiểm.",
+        "Nếu em muốn, hãy thử suy nghĩ cách giảm nguy cơ gặp lại tình huống tương tự.",
+        "Em xứng đáng được tôn trọng. Hãy chia sẻ cảm xúc để bớt căng thẳng.",
+        "Nếu cần, em có thể điền form ẩn danh 📝 hoặc gọi trực tiếp thầy cô 📞."
     ],
     "bắt nạt": [
-        "Thầy cô hiểu cảm giác này, em đã rất can đảm khi chia sẻ.",
-        "Ghi lại sự việc, báo người lớn tin cậy để được giúp đỡ.",
-        "Nếu xảy ra trên mạng, hãy chụp màn hình, lưu lại bằng chứng và báo bố mẹ hoặc thầy cô.",
-        "Đừng giữ cảm xúc một mình, chia sẻ giúp em bớt căng thẳng và cảm thấy an toàn hơn.",
-        "Nhớ rằng em xứng đáng được tôn trọng. Nếu cần, em có thể điền form ẩn danh hoặc gọi trực tiếp thầy cô."
+        "Thầy cô hiểu cảm giác này. Em đã rất can đảm khi chia sẻ.",
+        "Ghi lại sự việc và báo người lớn tin cậy.",
+        "Nếu xảy ra trên mạng, chụp màn hình và báo bố mẹ/thầy cô.",
+        "Chia sẻ cảm xúc giúp em bớt căng thẳng và nhận lời khuyên.",
+        "Nhớ rằng em xứng đáng được tôn trọng. Form ẩn danh 📝 hoặc gọi thầy cô 📞 luôn sẵn sàng."
     ],
     "stress": [
-        "Cảm giác căng thẳng là bình thường. Hãy thử hít thở sâu, đi dạo hoặc nghe nhạc để thư giãn.",
-        "Viết ra những điều khiến em stress giúp em nhận diện và tìm cách giải quyết từng bước.",
-        "Chia sẻ với bố mẹ hoặc thầy cô giúp em nhận được lời khuyên và sự đồng hành.",
-        "Hãy nghỉ ngơi, ngủ đủ và sắp xếp thời gian học tập hợp lý.",
-        "Nếu cảm giác kéo dài, em có thể điền form ẩn danh hoặc gọi trực tiếp thầy cô để được hỗ trợ."
+        "Căng thẳng là bình thường. Hít thở sâu hoặc đi dạo giúp em dịu tâm trạng.",
+        "Viết nhật ký để nhận diện cảm xúc.",
+        "Chia sẻ với bố mẹ hoặc thầy cô giúp bớt nặng lòng.",
+        "Hãy nghỉ ngơi, ngủ đủ và sắp xếp thời gian hợp lý.",
+        "Nếu kéo dài, điền form ẩn danh 📝 hoặc gọi thầy cô 📞 để được hỗ trợ."
     ],
     "lo lắng": [
-        "Thầy cô hiểu em đang lo lắng. Hãy kể thêm để thầy cô biết rõ hơn.",
+        "Thầy cô hiểu em đang lo lắng. Hãy kể thêm để thầy cô hiểu rõ hơn.",
         "Hít thở sâu, phân tích những điều em có thể kiểm soát trước tiên.",
         "Chia sẻ với người tin cậy hoặc thầy cô sẽ giúp em bớt căng thẳng.",
         "Viết nhật ký hoặc vẽ giúp em giải tỏa cảm xúc.",
-        "Nếu lo lắng kéo dài, điền form hoặc gọi trực tiếp thầy cô để được hướng dẫn cụ thể."
+        "Nếu lo lắng kéo dài, điền form 📝 hoặc gọi thầy cô 📞 để được hướng dẫn."
     ],
     "buồn": [
         "Cảm giác buồn là bình thường, thầy cô luôn sẵn sàng lắng nghe.",
-        "Hãy thử chia sẻ với bạn bè, bố mẹ hoặc thầy cô để bớt nặng lòng.",
-        "Đi dạo, nghe nhạc, viết nhật ký sẽ giúp tâm trạng dịu lại.",
-        "Hãy dành thời gian chăm sóc bản thân, nghỉ ngơi đầy đủ.",
-        "Nếu em vẫn buồn lâu, em có thể điền form ẩn danh hoặc gọi thầy cô để được đồng hành."
-    ],
-    "sức khỏe": [
-        "Khi gặp vấn đề về sức khỏe, hãy chia sẻ ngay với bố mẹ hoặc thầy cô.",
-        "Nếu có dấu hiệu bất thường, đi khám bác sĩ là cách tốt nhất để chăm sóc bản thân.",
-        "Học cách giữ vệ sinh, ăn uống đủ chất và tập thể dục đều đặn.",
-        "Nếu em cần tư vấn chi tiết hơn, có thể điền form hoặc gọi thầy cô trực tiếp."
-    ],
-    "mạng": [
-        "Nếu em gặp bắt nạt trên mạng, chụp màn hình và báo bố mẹ hoặc thầy cô.",
-        "Không phản hồi tiêu cực, tránh xung đột để bảo vệ bản thân.",
-        "Chia sẻ cảm xúc giúp em bớt căng thẳng và nhận được lời khuyên.",
-        "Nhớ rằng em xứng đáng được tôn trọng. Thầy cô luôn đồng hành."
-    ],
-    "atgt": [
-        "Tuân thủ luật giao thông là cách bảo vệ bản thân.",
-        "Đi cùng bạn hoặc người lớn khi đường vắng để an toàn.",
-        "Chú ý biển báo và tín hiệu giao thông, không chạy xe khi mệt hay vội vàng.",
-        "Nếu gặp tình huống nguy hiểm, hãy báo ngay người lớn tin cậy."
+        "Chia sẻ với bố mẹ hoặc thầy cô để bớt nặng lòng.",
+        "Đi dạo, nghe nhạc, viết nhật ký giúp tâm trạng dịu lại.",
+        "Dành thời gian chăm sóc bản thân, nghỉ ngơi đầy đủ.",
+        "Nếu vẫn buồn lâu, điền form 📝 hoặc gọi thầy cô 📞 để được đồng hành."
     ]
 };
 
@@ -121,8 +105,8 @@ function getResponse(msg){
 
     // Nhắc gợi ý điền form sau mỗi 10 câu trả lời
     if(responseCount>=10 && responseCount%10===0){
-        reply += "<br><br>💡 Nếu em vẫn còn lo lắng, em có thể điền biểu mẫu kín hoặc gọi trực tiếp thầy cô:";
-        reply += `<br><a href="https://forms.gle/PWc5rKJEGZw564zD8" target="_blank">📝 Biểu mẫu hỗ trợ kín đáo</a>`;
+        reply += "<br><br>💡 Nếu em vẫn còn lo lắng, em có thể điền biểu mẫu kín 📝 hoặc gọi trực tiếp thầy cô 📞:";
+        reply += `<br><a href="https://forms.gle/PWc5rKJEGZw564zD8" target="_blank">Gửi Form ẩn danh</a>`;
         reply += `<br>📞 Gọi trực tiếp: 0909123456`;
     }
 
