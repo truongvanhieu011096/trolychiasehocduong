@@ -58,7 +58,7 @@ body {
 
 .chat-container {
     width: 100%;
-    max-width: 400px; /* tăng chiều rộng cho iPhone 16 Pro Max */
+    max-width: 400px; /* tăng chiều rộng cho điện thoại lớn */
     background: white;
     border-radius: 14px;
     box-shadow: 0 12px 25px rgba(0,0,0,0.18);
