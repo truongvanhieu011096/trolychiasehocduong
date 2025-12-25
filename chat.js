@@ -9,7 +9,7 @@ input.addEventListener("keydown", e => {
     if (e.key === "Enter") send();
 });
 
-// Chọn tâm trạng từ popup
+// Chọn tâm trạng
 function selectMood(selected) {
     mood = selected;
     popup.style.display = "none";
@@ -17,7 +17,7 @@ function selectMood(selected) {
     setTimeout(() => addMessage(getResponse(mood.toLowerCase()), "bot"), 500);
 }
 
-// Thêm tin nhắn vào chat
+// Thêm tin nhắn
 function addMessage(text, sender) {
     const div = document.createElement("div");
     div.className = sender;
@@ -36,12 +36,10 @@ function send() {
     setTimeout(()=> addMessage(getResponse(text.toLowerCase()),"bot"), 500);
 }
 
-// Lấy ngẫu nhiên câu trả lời
-function r(arr){
-    return arr[Math.floor(Math.random()*arr.length)];
-}
+// Lấy ngẫu nhiên
+function r(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
 
-// Các chủ đề và câu trả lời dài, nhẹ nhàng, hướng dẫn vượt qua
+// Chủ đề & câu trả lời dài, nhẹ nhàng
 const topics = {
     "bị đánh": [
         "Em đã rất dũng cảm khi chia sẻ 💙. Báo bố mẹ để nhận sự hỗ trợ và bảo vệ bản thân.",
@@ -103,7 +101,7 @@ function getResponse(msg){
         ]);
     }
 
-    // Nhắc gợi ý điền form sau mỗi 10 câu trả lời
+    // Nhắc gợi ý form sau mỗi 10 câu
     if(responseCount>=10 && responseCount%10===0){
         reply += "<br><br>💡 Nếu em vẫn còn lo lắng, em có thể điền biểu mẫu kín 📝 hoặc gọi trực tiếp thầy cô 📞:";
         reply += `<br><a href="https://forms.gle/PWc5rKJEGZw564zD8" target="_blank">Gửi Form ẩn danh</a>`;
