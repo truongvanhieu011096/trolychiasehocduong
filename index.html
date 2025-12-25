@@ -8,7 +8,18 @@
 </head>
 <body>
 
-<a class="call-btn" href="tel:0909123456">📞 Gọi thầy/cô</a>
+<a class="call-btn" href="tel:0336175393">📞 Gọi thầy/cô</a>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <h2>Em đang cảm thấy thế nào hôm nay?</h2>
+        <button onclick="selectMood('Buồn')">Buồn</button>
+        <button onclick="selectMood('Lo lắng')">Lo lắng</button>
+        <button onclick="selectMood('Sợ hãi')">Sợ hãi</button>
+        <button onclick="selectMood('Stress')">Stress</button>
+        <button onclick="selectMood('Khác')">Khác</button>
+    </div>
+</div>
 
 <div class="chat-container">
     <div class="chat-header">
@@ -20,23 +31,9 @@
     <div class="chat-box" id="chatBox">
         <div class="bot">
             Chào em 🌱<br><br>
-            Ở đây, em có thể chia sẻ về: buồn, lo lắng, áp lực học tập, bị bắt nạt, sức khỏe vị thành niên, an toàn giao thông
-            hoặc bất cứ điều gì khiến em không thoải mái.<br>
-            <b>Thầy cô luôn ở đây để lắng nghe và đồng hành cùng em.</b>
+            Ở đây, em có thể chia sẻ về cảm xúc, áp lực học tập, mối quan hệ, sức khỏe, an toàn, hoặc bất kỳ điều gì khiến em lo lắng.<br>
+            <b>Thầy cô sẽ đồng hành và hướng dẫn em cách vượt qua.</b>
         </div>
-    </div>
-
-    <div class="quick-actions">
-        <button onclick="quick('em đang rất buồn')">💔 Buồn – lo</button>
-        <button onclick="quick('em bị bắt nạt')">😞 Bị bắt nạt</button>
-        <button onclick="quick('áp lực học tập')">📚 Áp lực học</button>
-        <button onclick="quick('bị trêu chọc trên mạng')">📱 Online</button>
-        <button onclick="quick('an toàn giao thông')">🚦 ATGT</button>
-        <button onclick="quick('vấn đề sức khỏe vị thành niên')">🩺 Sức khỏe</button>
-        <button onclick="quick('quan hệ bạn bè')">👫 Bạn bè</button>
-        <button onclick="quick('vấn đề gia đình')">🏠 Gia đình</button>
-        <button onclick="quick('cảm giác stress')">😰 Stress</button>
-        <button onclick="quick('cảm giác trầm cảm')">🌀 Trầm cảm</button>
     </div>
 
     <div class="chat-input">
