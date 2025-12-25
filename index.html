@@ -2,45 +2,45 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Trợ lý tâm lý học đường</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Tư Vấn THCS Tố Hữu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<a class="call-btn" href="tel:0336175393">📞 Gọi thầy/cô</a>
+<!-- Nút gọi trực tiếp thầy cô -->
+<a href="tel:0909123456" class="call-btn">📞 Gọi Thầy/Cô</a>
 
-<!-- Popup chọn tâm trạng -->
+<!-- Nút Form ẩn danh -->
+<div style="text-align:center; margin:6px 0;">
+    <a href="https://forms.gle/PWc5rKJEGZw564zD8" target="_blank" class="form-btn">
+        📝 Gửi Form ẩn danh
+    </a>
+</div>
+
+<!-- Popup chọn tâm trạng ban đầu -->
 <div id="popup" class="popup">
     <div class="popup-content">
-        <h2>Em đang cảm thấy thế nào hôm nay?</h2>
+        <h2>Em đang cảm thấy như thế nào hôm nay?</h2>
         <div class="popup-buttons">
             <button onclick="selectMood('Buồn')">Buồn</button>
             <button onclick="selectMood('Lo lắng')">Lo lắng</button>
-            <button onclick="selectMood('Sợ hãi')">Sợ hãi</button>
             <button onclick="selectMood('Stress')">Stress</button>
+            <button onclick="selectMood('Bị bắt nạt')">Bị bắt nạt</button>
             <button onclick="selectMood('Khác')">Khác</button>
         </div>
     </div>
 </div>
 
+<!-- Chat container -->
 <div class="chat-container">
     <div class="chat-header">
-        💙 Trợ lý tâm lý học đường
-        <small>Thầy cô luôn sẵn sàng lắng nghe em</small>
-        <div class="sub-title">Sản phẩm dự thi KHKT – Trường THCS Tố Hữu</div>
+        Chatbot Tư Vấn THCS Tố Hữu
+        <small class="sub-title">Sản phẩm dự thi KHKT trường THCS Tố Hữu</small>
     </div>
-
-    <div class="chat-box" id="chatBox">
-        <div class="bot">
-            Chào em 🌱<br><br>
-            Em có thể chia sẻ về cảm xúc, áp lực học tập, mối quan hệ, sức khỏe, an toàn, hoặc bất kỳ điều gì khiến em lo lắng.<br>
-            <b>Thầy cô sẽ đồng hành và hướng dẫn em cách vượt qua.</b>
-        </div>
-    </div>
-
+    <div id="chatBox" class="chat-box"></div>
     <div class="chat-input">
-        <input id="userInput" type="text" placeholder="Em hãy gõ điều em đang gặp phải…">
+        <input type="text" id="userInput" placeholder="Nhập tin nhắn...">
         <button onclick="send()">Gửi</button>
     </div>
 </div>
@@ -48,4 +48,3 @@
 <script src="chat.js"></script>
 </body>
 </html>
-
