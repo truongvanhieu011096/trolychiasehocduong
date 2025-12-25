@@ -39,21 +39,21 @@ function r(arr){
 
 const topics = {
     "bị đánh": [
-        "Em đã rất dũng cảm khi chia sẻ.",
-        "Báo ngay với bố mẹ để được hỗ trợ.",
-        "Đi kiểm tra sức khỏe nếu cần.",
-        "Thông báo thầy cô chủ nhiệm để nhận sự giúp đỡ.",
-        "Ghi lại chi tiết sự việc, ngày giờ, chứng cứ.",
-        "Nếu lặp lại → liên hệ ban giám hiệu.",
-        "Học kỹ năng tự bảo vệ, tránh nguy hiểm.",
+        "Em đã rất dũng cảm khi chia sẻ điều này.",
+        "Điều đầu tiên: báo ngay với bố mẹ để nhận hỗ trợ và bảo vệ an toàn.",
+        "Đi kiểm tra sức khỏe, ghi chú các vết thương nếu có.",
+        "Thông báo thầy cô chủ nhiệm để họ cùng em xử lý sự việc.",
+        "Ghi lại chi tiết: ngày giờ, nơi xảy ra, chứng cứ nếu có.",
+        "Nếu tình trạng lặp lại, liên hệ ban giám hiệu.",
+        "Học kỹ năng tự bảo vệ, tránh nơi nguy hiểm.",
         "Đừng giữ cảm xúc một mình, chia sẻ giúp em bớt căng thẳng.",
-        "Điền biểu mẫu kín hoặc gọi trực tiếp thầy cô nếu cần."
+        "Nếu cần, em có thể điền form kín hoặc gọi trực tiếp thầy cô."
     ],
     "bắt nạt": [
-        "Thầy cô hiểu cảm giác này. Hãy kể chi tiết để được hướng dẫn.",
+        "Thầy cô hiểu cảm giác này, em đã rất can đảm khi chia sẻ.",
         "Ghi lại sự việc, báo người lớn tin cậy.",
-        "Nếu trên mạng, chụp màn hình và báo thầy cô hoặc bố mẹ.",
-        "Đừng giữ cảm xúc một mình, chia sẻ giúp em giảm căng thẳng.",
+        "Nếu xảy ra trên mạng, chụp màn hình và báo thầy cô hoặc bố mẹ.",
+        "Đừng giữ cảm xúc một mình, chia sẻ giúp em bớt căng thẳng.",
         "Nhớ rằng em xứng đáng được tôn trọng và an toàn."
     ],
     "buồn":["Cảm giác buồn là bình thường. Chia sẻ với người tin cậy.","Viết nhật ký giúp nhận diện cảm xúc.","Đi dạo, nghe nhạc giúp cải thiện tâm trạng.","Nếu buồn lâu, chia sẻ với thầy cô."],
