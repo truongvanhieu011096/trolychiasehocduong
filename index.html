@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Trợ lý chia sẻ học đường</title>
+    <title>Trợ lý tâm lý học đường</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -10,20 +10,23 @@
 
 <a class="call-btn" href="tel:0336175393">📞 Gọi thầy/cô</a>
 
+<!-- Popup chọn tâm trạng -->
 <div id="popup" class="popup">
     <div class="popup-content">
         <h2>Em đang cảm thấy thế nào hôm nay?</h2>
-        <button onclick="selectMood('Buồn')">Buồn</button>
-        <button onclick="selectMood('Lo lắng')">Lo lắng</button>
-        <button onclick="selectMood('Sợ hãi')">Sợ hãi</button>
-        <button onclick="selectMood('Stress')">Stress</button>
-        <button onclick="selectMood('Khác')">Khác</button>
+        <div class="popup-buttons">
+            <button onclick="selectMood('Buồn')">Buồn</button>
+            <button onclick="selectMood('Lo lắng')">Lo lắng</button>
+            <button onclick="selectMood('Sợ hãi')">Sợ hãi</button>
+            <button onclick="selectMood('Stress')">Stress</button>
+            <button onclick="selectMood('Khác')">Khác</button>
+        </div>
     </div>
 </div>
 
 <div class="chat-container">
     <div class="chat-header">
-        💙 Trợ lý chia sẻ học đường
+        💙 Trợ lý tâm lý học đường
         <small>Thầy cô luôn sẵn sàng lắng nghe em</small>
         <div class="sub-title">Sản phẩm dự thi KHKT – Trường THCS Tố Hữu</div>
     </div>
@@ -31,7 +34,7 @@
     <div class="chat-box" id="chatBox">
         <div class="bot">
             Chào em 🌱<br><br>
-            Ở đây, em có thể chia sẻ về cảm xúc, áp lực học tập, mối quan hệ, sức khỏe, an toàn, hoặc bất kỳ điều gì khiến em lo lắng.<br>
+            Em có thể chia sẻ về cảm xúc, áp lực học tập, mối quan hệ, sức khỏe, an toàn, hoặc bất kỳ điều gì khiến em lo lắng.<br>
             <b>Thầy cô sẽ đồng hành và hướng dẫn em cách vượt qua.</b>
         </div>
     </div>
